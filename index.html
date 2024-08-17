@@ -7,6 +7,23 @@
     <title>Monster Wave</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+    
+    <!-- Bắt đầu đoạn script quản lý visibilitychange -->
+    <script>
+      document.addEventListener("visibilitychange", function() {
+        if (document.hidden) {
+          // Tab bị ẩn, tạm ngưng Unity
+          SendMessage('GameObjectName', 'OnApplicationPause', true);
+          console.log("Tab is hidden, game paused.");
+        } else {
+          // Tab được hiển thị lại, tiếp tục Unity
+          SendMessage('GameObjectName', 'OnApplicationPause', false);
+          console.log("Tab is visible, game resumed.");
+        }
+      });
+    </script>
+    <!-- Kết thúc đoạn script quản lý visibilitychange -->
+
   </head>
   <body class="dark">
     <div id="unity-container" class="unity-desktop">
