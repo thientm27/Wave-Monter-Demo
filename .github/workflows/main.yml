@@ -15,8 +15,8 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2 
     - name: Clear
-      run: docker stop thien-tm:v1 || true && docker rm thien-tm:v1 || true
+      run: docker stop thien-tm || true && docker rm thien-tm || true
     - name: Build
       run: docker build -t thien-tm:v1 .
     - name: Run
-      run: docker run -d -p 3052:80 thien-tm:v1
+      run: docker run -d -p 3052:80 --name thien-tm thien-tm:v1
