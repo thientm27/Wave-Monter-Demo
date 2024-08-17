@@ -5,7 +5,7 @@ name: Compose Docker project
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   docker-compose:
