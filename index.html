@@ -42,11 +42,11 @@
     <script>
       const hideFullScreenButton = "1";
       const buildUrl = "Build";
-      const loaderUrl = buildUrl + "/Build.loader.js";
+      const loaderUrl = buildUrl + "/Wave-Monter-Demo.loader.js";
       const config = {
-        dataUrl: buildUrl + "/Build.data",
-        frameworkUrl: buildUrl + "/Build.framework.js",
-        codeUrl: buildUrl + "/Build.wasm",
+        dataUrl: buildUrl + "/Wave-Monter-Demo.data",
+        frameworkUrl: buildUrl + "/Wave-Monter-Demo.framework.js",
+        codeUrl: buildUrl + "/Wave-Monter-Demo.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "Monster Wave",
@@ -80,7 +80,7 @@
         container.className = "unity-mobile";
         config.devicePixelRatio = Math.min(config.devicePixelRatio, 2);
       }
-      canvas.style.background = "url('" + buildUrl + "/Build.jpg') center / cover";
+      canvas.style.background = "url('" + buildUrl + "/Wave-Monter-Demo.jpg') center / cover";
       loadingCover.style.display = "";
 
       const script = document.createElement("script");
